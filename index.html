@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkommenssteuerrechner</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ############# HEADER ############# -->
+    <!-- ######## NAV ######## -->
+    <header>
+
+    </header>
+    <!-- ############# MAIN ############# -->
+    <main>
+        <form action="" onsubmit="return false">
+            <h1>Einkommensteuer­rechner</h1>
+            <div class="back">
+                <label for="stYear">Steuerjahr</label>
+                <select id="stYear" name="stYear">
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                </select>
+            </div>
+            <div class="back">
+                <label for="incomeInput">Zu versteuerndes Einkommen</label>
+                <input type="text" name="incomeInput" id="incomeInput">
+            </div>
+            <div class="back">
+                <label for="">Art der Veranlagung</label>
+                <div>
+                    <div>
+                        <input type="radio" name="grundRadio" id="grundRadio" checked="checked">
+                        <label for="grundRadio">Einzelveranlagung</label>
+                    </div>
+                    <input type="radio" name="grundRadio" id="splitRadio">
+                    <label for="splitRadio">Zusammenveranlagung</label>
+                </div>
+            </div>
+            <button onclick="steuerCalculator()">BERECHNEN</button>
+            <div class="line"></div>
+            <h2>Ergebnis</h2>
+            <div class="back">
+                <p>Einkommensteuer</p>
+                <p id="result"></p>
+            </div>
+
+        </form>
+    </main>
+    <!-- ############# FOOTER ############# -->
+    <footer>
+
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
