@@ -4,8 +4,7 @@ let steuerCalculator = () => {
   let kiSt = document.getElementById("kiSt").value;
   let result = document.getElementById("result");
   let splitRadio = document.getElementById("splitRadio");
-  let ESt = 0;
-
+  let ESt;
   if (splitRadio.checked) {
     incomeInput = incomeInput / 2;
   }
@@ -15,7 +14,7 @@ let steuerCalculator = () => {
   if (stYear == "2021") {
     // unter 9744€
     if (Number(incomeInput) <= 9744) {
-      result.innerHTML = "0€";
+      ESt = 0;
     }
     // zwischen 9745€ & 14753€
     else if (9745 <= Number(incomeInput) && Number(incomeInput) <= 14753) {
@@ -42,7 +41,7 @@ let steuerCalculator = () => {
   else if (stYear == "2020") {
     // unter 9408€
     if (Number(incomeInput) <= 9408) {
-      result.innerHTML = "0€";
+      ESt = 0;
     }
     // zwischen 9409€ & 14532€
     else if (9409 <= Number(incomeInput) && Number(incomeInput) <= 14532) {
@@ -69,7 +68,7 @@ let steuerCalculator = () => {
   else if (stYear == "2019") {
     // unter 9168€
     if (Number(incomeInput) <= 9168) {
-      result.innerHTML = "0€";
+      ESt = 0;
     }
     // zwischen 9169€ & 14254€
     else if (9169 <= Number(incomeInput) && Number(incomeInput) <= 14254) {
